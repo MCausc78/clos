@@ -1,0 +1,54 @@
+<project>
+	<start>#!/bin/bash
+AS="nasm"
+CC="x86_64-elf-gcc"
+rm -rf bin obj
+mkdir bin obj
+ROOT=$PWD
+shopt -s globstar
+bmkdirs () {
+	for f in $1/*
+	do
+		if [ -d $f ]
+		then
+			mkdir -p ${f/$1/obj}
+			bmkdirs ./$f
+		fi
+	done
+}
+bmkdirs src/asm
+echo "[ASM] Compiling ASM..."
+FC_ASM=0
+for f in ./src/asm/**/**/**/**/**/**/**/**/**/**.asm
+do
+	if [ -f $f ]
+	then
+		FC_ASM=`expr ${FC_ASM} + 1`
+		FILE=${f/.\/src\/asm/}
+		FILE=${FILE/.asm/}
+		FILE=${FILE/\\\\/\/}
+		FILE=${FILE/\/\//\/}
+		# mkdir -p "$(dirname ./src/asm/${FILE}.asm)"
+		DIR="$(dirname ./src/asm/${FILE}.asm)"
+		mkdir -p ${DIR/.\/src\/asm/.\/obj}
+		$AS -felf32 -o ./obj/${FILE}.o ./src/asm/${FILE}.asm
+	fi
+done
+echo "Compiled ${FC_ASM} files (Assembly language)"
+
+bmkdirs src/c
+cd src/c
+FC_C=0
+</start>
+	<compiler>$CC -m32 -I. -c ./$FILE$.c -o $ROOT/obj/$FILE$.o -ffreestanding -O2 -Wall -Wextra
+FC_C+=$[$FC_C + 1]</compiler>
+	<end>
+echo "Compiled ${FC_C} files (C_"
+cd $ROOT
+shopt -s globstar
+x86_64-elf-ld -melf_i386 --entry _start -T ./link.ld -o ./bin/vmcl ./obj/**/**/**/**/**/**/**/**/**/**.o
+shopt -u globstar</end>
+	<root>src/c/</root>
+	<options>
+	</options>
+</project>

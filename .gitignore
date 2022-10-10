@@ -1,0 +1,5 @@
+builder/.vs
+kernel/.vs
+kernel/bin/
+kernel/obj/
+kernel/qb/
