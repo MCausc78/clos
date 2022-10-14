@@ -1,6 +1,6 @@
 #include "driver/keyboard.h"
 #include "driver/tty.h"
-#include "std/io.h"
+#include "std/stdio.h"
 #include "std/string.h"
 #include "sys/cpu/isr.h"
 #include "sys/ports.h"

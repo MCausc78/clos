@@ -10,7 +10,7 @@
 #define compl ~
 
 #define not !
-#define not_eq !
+#define not_eq !=
 
 #define or ||
 #define or_eq |=

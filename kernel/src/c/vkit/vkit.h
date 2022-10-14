@@ -1,7 +1,7 @@
 #ifndef _VKIT_H
 #define _VKIT_H
 
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 typedef struct
 {

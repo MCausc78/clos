@@ -1,7 +1,7 @@
 #ifndef _SYS_BITSET_H
 #define _SYS_BITSET_H
 
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 typedef struct {
 	unsigned short part1;

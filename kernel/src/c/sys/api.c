@@ -1,10 +1,9 @@
 #include <stdint.h>
-#include "std/bool.h"
+#include "std/stdbool.h"
 #include "sys/api.h"
 #include "sys/ports.h"
 
-void sleep(uint32_t time)
+void sleep(uint32_t t)
 {
-	uint32_t t=time;
-	while(--t <= 0) asm volatile("nop");
+	while(--t > 0) asm volatile("nop");
 }

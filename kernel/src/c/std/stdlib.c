@@ -1,5 +1,5 @@
 #include "std/stdlib.h"
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 unsigned long int next = 1;
 

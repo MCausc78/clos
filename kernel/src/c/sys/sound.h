@@ -3,10 +3,10 @@
 
 #include <stdint.h>
 
-void playSound(uint32_t);
+void sys_sound_play(uint32_t);
 
-void noSound();
+void sys_sound_nosound();
 
-void beep();
+void sys_sound_beep();
 
 #endif /* _SYS_SOUND_H */

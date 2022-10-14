@@ -1,7 +1,7 @@
 #ifndef _STD_LIB_H
 #define _STD_LIB_H
 
-#include "std/bool.h"
+#include "std/stdbool.h"
 #include <stddef.h>
 #include <stdint.h>
 

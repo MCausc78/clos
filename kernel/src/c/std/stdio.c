@@ -1,7 +1,7 @@
-#include "std/io.h"
+#include "std/stdio.h"
 #include <stdarg.h>
 #include <stdint.h>
-#include "std/bool.h"
+#include "std/stdbool.h"
 #include "std/string.h"
 #include "std/number.h"
 #include "driver/tty.h"

@@ -1,7 +1,7 @@
 #ifndef _STD_TIME_H
 #define _STD_TIME_H
 
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 struct tm
 {

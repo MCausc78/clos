@@ -1,5 +1,5 @@
 #include "std/assert.h"
-#include "std/bool.h"
+#include "std/stdbool.h"
 #include "std/ctype.h"
 #include "std/number.h"
 #include "std/string.h"

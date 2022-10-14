@@ -4,7 +4,7 @@
 
 unsigned int tick = 0;
 
-static void timer_callback(registers_t regs) {
+void timer_callback(registers_t regs) {
 	tick++;
 	(void)(regs);
 }

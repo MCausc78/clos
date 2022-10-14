@@ -1,5 +1,5 @@
 #include "std/ctype.h"
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 bool isalnum(int c) {
 	return (c >= '0' ? c <= '9' : isalpha(c));

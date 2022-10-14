@@ -1,7 +1,14 @@
 #include "std/math.h"
 
-long factorial(char n) {
-	return n < 2 ? 1 : n * factorial(n - 1);
+long factorial(long n) {
+	if(n == 0) {
+		return 1;
+	} else {
+		long result = 1;
+		for(long i = 0; i < n; i++)
+			result *= i;
+		return result;
+	}
 }
 
 double pow(double x, double n) {

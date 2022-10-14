@@ -1,6 +1,6 @@
 #include "sys/cpu/isr.h"
 #include "sys/cpu/idt.h"
-#include "std/io.h"
+#include "std/stdio.h"
 #include "driver/keyboard.h"
 #include "std/string.h"
 #include "sys/cpu/timer.h"

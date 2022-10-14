@@ -1,4 +1,4 @@
-#include "std/bool.h"
+#include "std/stdbool.h"
 
 bool bool_and(bool a, bool b) {
 	return (a ? (b ? true : false) : false);

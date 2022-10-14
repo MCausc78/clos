@@ -9,6 +9,4 @@
 
 extern void __assert(const char *, const char *, int);
 
-// Assertion failed: 2 == 4 && "?", file assert.c, line 6
-
 #endif /* _STD_ASSERT_H */

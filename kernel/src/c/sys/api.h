@@ -11,6 +11,6 @@
  * @param время
  *
  */
-void sys_sleep(uint32_t time);
+void sys_sleep(int);
 
 #endif

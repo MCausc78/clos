@@ -82,8 +82,8 @@
 #define KEY_TAB 0x0F
 #define KEY_UP 0x48
 
-void cursor_move(int, int);
+void console_ursor_move(int, int);
 
-uint16_t get_cursor_pos(void);
+uint16_t console_get_cursor_pos(void);
 
 #endif /* _SYS_CONSOLE_H */

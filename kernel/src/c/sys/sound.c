@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include "sys/ports.h"
 
-void playSound(uint32_t frequence) {
+void sys_sound_play(uint32_t frequence) {
 	uint32_t div = 1193180 / frequence;
 	
 	outb(0x43, 0xb6);
@@ -17,11 +17,11 @@ void playSound(uint32_t frequence) {
 	}
 }
 
-void noSound() {
+void sys_sound_nosound() {
 	outb(0x61, inb(0x61) & 0xFC);
 }
 
-void beep() {
-	playSound(100);
-	noSound();
+void sys_sound_beep() {
+	sys_sound_play(100);
+	sys_sound_nosound();
 }
